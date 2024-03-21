@@ -1,0 +1,8 @@
+### Inicial
+GET http://localhost:1234/
+
+### Get all games
+GET http://localhost:1234/games
+
+### Get one game
+GET http://localhost:1234/games/ee89eb0d-e39b-11ee-afd3-008cfa89b17e
