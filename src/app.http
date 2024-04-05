@@ -4,5 +4,32 @@ GET http://localhost:1234/
 ### Get all games
 GET http://localhost:1234/games
 
-### Get one game
+### Get one game by id
 GET http://localhost:1234/games/ee89eb0d-e39b-11ee-afd3-008cfa89b17e
+
+### Get games by genre id
+GET http://localhost:1234/games/genre/ee8e072f-e39b-11ee-afd3-008cfa89b17e
+
+### Create new game
+POST http://localhost:1234/games
+Content-Type: application/json
+
+{  
+  "title": "Terraforming mars",
+  "players": "2 - 4",
+  "age": "+10",
+  "duration": "115",
+  "image": "https://devirinvestments.s3.eu-west-1.amazonaws.co…atalog/product/8436017220681-1200-face3d-copy.jpg",
+  "rate": 8.5
+}
+
+### Delete game
+DELETE http://localhost:1234/games/d0b974e7-e864-11ee-a95b-008cfa89b17e
+
+### Update game
+PATCH http://localhost:1234/games/ee89eb0d-e39b-11ee-afd3-008cfa89b17e
+Content-Type: application/json
+
+{  
+  "players": "2 - 8",
+}

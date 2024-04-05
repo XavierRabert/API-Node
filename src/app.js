@@ -7,7 +7,6 @@ export const createApp = ({ gameModel }) => {
   const app = express();
   app.use(express.json());
   app.use(corsMiddleware());
-  app.use(express.json());
   app.disable("x-powered-by");
 
   app.use("/games", createGamesRouter({ gameModel }));
@@ -18,12 +17,3 @@ export const createApp = ({ gameModel }) => {
     console.log(`server listening on port http://localhost:${PORT}`);
   });
 };
-// const config = {
-//   host: "localhost",
-//   user: "root",
-//   port: 3306,
-//   password: "root",
-//   database: "boardgames",
-// };
-
-// const connection = await mysql.createConnection(config);
